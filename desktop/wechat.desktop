@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=微信
+Comment=
+Exec=/usr/bin/wechat
+Icon=wechat
+Path=
+Terminal=false
+StartupNotify=false

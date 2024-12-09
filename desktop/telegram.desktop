@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Telegram
+Comment=
+Exec=/usr/bin/telegram-desktop
+Icon=telegram
+Path=
+Terminal=false
+StartupNotify=false

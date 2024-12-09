@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=腾讯QQ
+Comment=
+Exec=/opt/QQ/qq --no-sandbox
+Icon=qq
+Path=
+Terminal=false
+StartupNotify=false

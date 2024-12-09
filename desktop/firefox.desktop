@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Firefox
+Comment=
+Exec=/usr/bin/firefox
+Icon=/usr/share/firefox-esr/browser/chrome/icons/default/default128.png
+Path=
+Terminal=false
+StartupNotify=false
