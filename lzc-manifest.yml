@@ -1,7 +1,7 @@
 lzc-sdk-version: 0.1
 name: 即时通讯多合一
 package: iamxiaoe.lzcapp.imallinone
-version: 0.0.1
+version: 0.0.2
 description:
 license: https://choosealicense.com/licenses/mit/
 homepage:
@@ -23,4 +23,3 @@ services:
       - /lzcapp/run/home/imallinone/firefox:/home/lazycat/.mozilla
       - /lzcapp/run/home/imallinone/wechat:/home/lazycat/Documents/xwechat_files
       - /lzcapp/run/home/imallinone/wechat-cache:/home/lazycat/.xwechat
-      - /lzcapp/run/home/imallinone/telegram:/home/lazycat/.local/share/TelegramDesktop
