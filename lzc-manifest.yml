@@ -1,7 +1,7 @@
 lzc-sdk-version: 0.1
 name: 即时通讯多合一
 package: iamxiaoe.lzcapp.imallinone
-version: 0.0.2
+version: 0.0.4
 description:
 license: https://choosealicense.com/licenses/mit/
 homepage:
@@ -17,7 +17,10 @@ application:
 
 services:
   imallinone:
-    image: registry.lazycat.cloud/lzc-im-all-in-one:0.1.0
+    image: registry.lazycat.cloud/lzc-im-all-in-one:0.2.9
+    environment:
+      - TZ=Asia/Shanghai
+      - LANG=zh_CN.UTF-8
     binds:
       - /lzcapp/run/home/imallinone/QQ:/home/lazycat/.config/QQ
       - /lzcapp/run/home/imallinone/firefox:/home/lazycat/.mozilla
