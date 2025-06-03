@@ -1,7 +1,7 @@
 lzc-sdk-version: 0.1
 name: 即时通讯多合一
 package: iamxiaoe.lzcapp.imallinone
-version: 0.0.4
+version: 0.0.6
 description:
 license: https://choosealicense.com/licenses/mit/
 homepage:
@@ -13,16 +13,17 @@ application:
   depends_on:
     - imallinone
   multi_instance: true # 是否启用多实例
-  background_task: true #是否存在后台任务，若存在则系统不会对此app进行主动休眠等操作
+  background_task: false #是否存在后台任务，若存在则系统不会对此app进行主动休眠等操作
+  gpu_accel: true
 
 services:
   imallinone:
-    image: registry.lazycat.cloud/lzc-im-all-in-one:0.2.9
+    image: registry.lazycat.cloud/lzc-im-all-in-one:0.3.7
     environment:
       - TZ=Asia/Shanghai
       - LANG=zh_CN.UTF-8
     binds:
-      - /lzcapp/run/home/imallinone/QQ:/home/lazycat/.config/QQ
-      - /lzcapp/run/home/imallinone/firefox:/home/lazycat/.mozilla
-      - /lzcapp/run/home/imallinone/wechat:/home/lazycat/Documents/xwechat_files
-      - /lzcapp/run/home/imallinone/wechat-cache:/home/lazycat/.xwechat
+      - /lzcapp/var/imallinone/QQ:/home/lazycat/.config/QQ
+      - /lzcapp/var/imallinone/firefox:/home/lazycat/.mozilla
+      - /lzcapp/var/imallinone/wechat:/home/lazycat/Documents/xwechat_files
+      - /lzcapp/var/imallinone/wechat-cache:/home/lazycat/.xwechat

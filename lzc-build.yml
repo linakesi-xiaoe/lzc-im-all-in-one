@@ -11,6 +11,10 @@ pkgout: ./
 # icon 仅仅允许 png 后缀的文件
 icon: ./lzc-icon.png
 
+compose_override:
+  services:
+    imallinone:
+      privileged: true
 # devshell 自定义应用的开发容器环境
 # - routers 指定应用容器的访问路由
 

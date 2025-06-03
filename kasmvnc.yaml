@@ -5,7 +5,13 @@ network:
     require_ssl: false
   udp:
     public_ip: 127.0.0.1
+
 runtime_configuration:
   allow_override_standard_vnc_server_settings: true
   allow_override_list:
     - pointer.enabled
+
+desktop:
+  gpu:
+    hw3d: true
+    drinode: /dev/dri/renderD128
