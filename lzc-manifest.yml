@@ -1,7 +1,7 @@
 lzc-sdk-version: 0.1
 name: 即时通讯多合一
 package: iamxiaoe.lzcapp.imallinone
-version: 0.0.6
+version: 0.0.7
 description:
 license: https://choosealicense.com/licenses/mit/
 homepage:
@@ -15,10 +15,13 @@ application:
   multi_instance: true # 是否启用多实例
   background_task: false #是否存在后台任务，若存在则系统不会对此app进行主动休眠等操作
   gpu_accel: true
+  unsupported_platforms:
+    - "ios"
+    - "android"
 
 services:
   imallinone:
-    image: registry.lazycat.cloud/lzc-im-all-in-one:0.3.7
+    image: registry.lazycat.cloud/lzc-im-all-in-one:0.3.19
     environment:
       - TZ=Asia/Shanghai
       - LANG=zh_CN.UTF-8

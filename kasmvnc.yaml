@@ -7,11 +7,27 @@ network:
     public_ip: 127.0.0.1
 
 runtime_configuration:
-  allow_override_standard_vnc_server_settings: true
-  allow_override_list:
-    - pointer.enabled
+  allow_override_standard_vnc_server_settings: false
+  allow_client_to_override_kasm_server_settings: false
+  allow_override_list: []  # 禁止客户端覆盖任何选项
+
+encoding:
+  max_frame_rate: 60  # 最高帧率
+  full_frame_updates: 60  # 始终全帧更新，确保无损一致性
+
+  video_encoding_mode:
+    jpeg_quality: -1  # 禁用视频编码模式
+    webp_quality: -1
+    max_resolution:
+      width: 1920
+      height: 1080
+    scaling_algorithm: progressive_bilinear  # 不缩放图像
+
+  compare_framebuffer: off  # 关闭帧缓冲对比，强制发送全部数据以保证无损
+  zrle_zlib_level: 0  # 关闭压缩以避免损失
+  hextile_improved_compression: false  # 禁用增强压缩以避免画质损失
 
 desktop:
   gpu:
-    hw3d: true
+    hw3d: false
     drinode: /dev/dri/renderD128

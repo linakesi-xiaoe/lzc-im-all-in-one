@@ -33,7 +33,7 @@ COPY --chown=lazycat:kams-user mount-mappied /home/lazycat/
 
 RUN chmod +x /home/lazycat/Desktop/*.desktop
 RUN chmod +x /home/lazycat/.config/autostart/*.desktop
-ENV VNCOPTIONS "-PreferBandwidth -disableBasicAuth -DynamicQualityMin=3 -DynamicQualityMax=9 -FrameRate=60 -DLP_ClipDelay=0 -sslOnly=0"
+ENV VNCOPTIONS "-PreferBandwidth -disableBasicAuth -FrameRate=60 -DLP_ClipDelay=0 -sslOnly=0"
 ENV VNC_PW lazycat
 
 USER lazycat
