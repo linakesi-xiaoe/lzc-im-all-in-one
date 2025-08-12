@@ -16,7 +16,7 @@ RUN sudo apt-get update;  sudo apt-get install -y firefox-esr wget xdg-utils; ap
     libxcomposite1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 \
     libxss1 libxtst6 libatomic1 libxcomposite1 libxrender1 libxrandr2 libxkbcommon-x11-0 \
     libfontconfig1 libdbus-1-3 libnss3 libx11-xcb1 && \apt clean && \
-    rm -rf /var/lib/apt/lists/* && wget https://archive2.kylinos.cn/deb/kylin/production/PART-V10-SP1/custom/partner/V10-SP1/pool/main/deb/wechat/wechat_4.0.1.12_amd64.deb -O wechat.deb; sudo dpkg -i wechat.deb; wget https://dldir1.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.17_250521_amd64_01.deb -O qq.deb; sudo dpkg -i qq.deb;rm *.deb;
+    rm -rf /var/lib/apt/lists/* && wget https://archive2.kylinos.cn/deb/kylin/production/PART-V10-SP1/custom/partner/V10-SP1/pool/main/deb/wechat/wechat_4.0.1.12_amd64.deb -O wechat.deb; sudo dpkg -i wechat.deb; wget https://dldir1v6.qq.com/qqfile/qq/QQNT/Linux/QQ_3.2.18_250724_amd64_01.deb -O qq.deb; sudo dpkg -i qq.deb;rm *.deb;
 RUN sed -i 's/kasm_user/lazycat/g' /dockerstartup/vnc_startup.sh
 RUN sed -i '5i sudo chown -R lazycat:kasm-user /home/lazycat/' /dockerstartup/kasm_default_profile.sh
 RUN cat /dockerstartup/kasm_default_profile.sh
