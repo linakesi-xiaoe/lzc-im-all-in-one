@@ -1,8 +1,8 @@
 lzc-sdk-version: 0.1
 name: 即时通讯多合一
 package: iamxiaoe.lzcapp.imallinone
-version: 0.0.13
-description:
+version: 0.0.14
+description: 微信，QQ，火狐浏览器多合一，支持调用本地中文输入法和剪贴板无感共享
 license: https://choosealicense.com/licenses/mit/
 homepage:
 author:
@@ -20,9 +20,17 @@ application:
     - "ios"
     - "android"
 
+locales:
+  zh:
+    name: "即时通讯多合一"
+    description: "微信，QQ，火狐浏览器多合一，支持调用本地中文输入法和剪贴板无感共享"
+  en:
+    name: "All-in-one IM"
+    description: "WeChat, QQ, and Firefox are all-in-one, supporting local Chinese input methods and unless clipboard sharing"
+
 services:
   imallinone:
-    image: registry.lazycat.cloud/lzc-im-all-in-one:0.3.24
+    image: registry.lazycat.cloud/lzc-im-all-in-one:0.3.25
     environment:
       - TZ=Asia/Shanghai
       - LANG=zh_CN.UTF-8
@@ -31,3 +39,4 @@ services:
       - /lzcapp/var/imallinone/firefox:/home/lazycat/.mozilla
       - /lzcapp/var/imallinone/wechat:/home/lazycat/Documents/xwechat_files
       - /lzcapp/var/imallinone/wechat-cache:/home/lazycat/.xwechat
+
